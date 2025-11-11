@@ -1,181 +1,186 @@
-/* Custom properties for easy color changes */
-:root {
-    --primary-text: #1a1a1a;
-    --secondary-text: #666;
-    --background-light: #f4f4f4;
-    --container-bg: #ffffff;
-    --accent-blue: #007bff;
-}
-
-/* Global Reset and Font */
-* {
+/* --- Global Styles and Background Setup --- */
+body {
+    font-family: Arial, sans-serif; /* Clean, default font */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--background-light);
+    background-color: #f0f0f0; /* Light gray desk background */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: 'Inter', sans-serif;
 }
 
-/* Main Container (Wrapper) */
-.modern-portfolio-wrapper {
-    width: 960px; /* Slightly wider for modern feel */
+/* Simulates the white paper/sheet on the desk */
+.portfolio-sheet {
+    background-color: #ffffff;
+    width: 900px; /* Width approximation */
+    padding: 30px 50px 50px 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Shadow for 3D "lift" effect */
+}
+
+/* --- Header & Navigation --- */
+.main-header {
     display: flex;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1); /* Stronger, softer shadow */
-    background-color: var(--container-bg);
-    border-radius: 12px;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.navigation .active {
+    color: #007bff; /* Primary Blue Accent */
+    border-bottom: 2px solid #007bff;
+    font-weight: bold;
+}
+
+/* --- Hero Section Layout (Image Left, Text Right) --- */
+.hero-section {
+    display: grid;
+    grid-template-columns: 350px 1fr; 
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.hero-image-container {
+    position: relative;
+    height: 350px;
     overflow: hidden;
-}
-
-/* --- LEFT PANEL (Visual/Image Side) --- */
-.visual-panel {
-    width: 45%; /* Slightly larger image area */
-    background: #0d0d0d; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .profile-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Basic filter to enhance the futuristic look */
-    filter: saturate(1.2) contrast(1.1);
+    z-index: 2;
+    position: relative;
+    filter: brightness(1.1); 
 }
 
-/* --- RIGHT PANEL (Content Side) --- */
-.content-panel {
-    width: 55%; 
-    padding: 40px 50px; /* Increased padding for spaciousness */
+/* Abstract Tech Overlay (Mimics the circuit board effect) */
+.tech-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 123, 255, 0.3), rgba(106, 13, 173, 0.3)); 
+    mix-blend-mode: multiply; /* Blends color into the photo */
+    z-index: 1;
+    /* You would need a background image here to replicate the circuit lines exactly */
 }
 
-/* Navigation Bar */
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end; /* Align right */
-    gap: 20px;
-    padding-bottom: 50px;
+/* Hero Content Styling */
+.hero-content h1 {
+    font-size: 32px;
+    margin: 0 0 5px 0;
+    color: #333;
+    letter-spacing: 1px;
 }
 
-.main-nav a {
-    text-decoration: none;
-    color: var(--secondary-text);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
+.hero-content .title {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.about-me h2 {
+    font-size: 16px;
+    color: #007bff;
+    font-weight: bold;
     text-transform: uppercase;
-    padding: 2px 0;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease-in-out;
-}
-
-.main-nav a:hover {
-    color: var(--primary-text);
-    border-bottom: 2px solid var(--accent-blue);
-}
-
-/* Intro Section (Hero) */
-.name-title {
-    font-size: 36px;
-    font-weight: 900;
-    color: var(--primary-text);
     margin-bottom: 10px;
-    letter-spacing: 1.5px;
 }
 
-.role {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--secondary-text);
+.about-me p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    max-width: 90%;
+}
+
+/* --- Featured Projects Section --- */
+.featured-projects h2 {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
     margin-bottom: 20px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
 }
 
-.summary-text {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #444;
-    margin-bottom: 40px;
-}
-
-/* Featured Projects */
-.section-heading {
-    font-size: 12px;
-    color: #aaa;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.project-grid {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 40px;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .project-card {
-    flex: 1;
-    padding: 20px 15px;
+    padding: 30px 20px;
     border-radius: 8px;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.project-card i {
+    font-size: 36px;
+    margin-bottom: 15px;
 }
 
-.project-card h4 {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 5px;
+.project-title {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #333;
 }
 
-.project-card p {
-    font-size: 13px;
-    font-weight: 400;
-    opacity: 0.9;
+.btn-learn-more {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid;
+    display: inline-block;
 }
 
-/* Specific Card Colors (More saturated/modern tech colors) */
-.card-blue {
-    background-color: #0077B5; /* Deep LinkedIn Blue */
-}
+/* Project Card Color Modifiers (Matching the image colors) */
+/* BLUE */
+.project-card.blue { background-color: #e3f2fd; } 
+.project-card.blue i { color: #1e88e5; }
+.project-card.blue .btn-learn-more { color: #1e88e5; border-color: #1e88e5; }
+.project-card.blue .btn-learn-more:hover { background-color: #1e88e5; color: white; }
 
-.card-purple {
-    background-color: #6A1B9A; /* Darker, richer purple */
-}
+/* PINK/PURPLE */
+.project-card.pink { background-color: #fce4ec; } 
+.project-card.pink i { color: #d81b60; }
+.project-card.pink .btn-learn-more { color: #d81b60; border-color: #d81b60; }
+.project-card.pink .btn-learn-more:hover { background-color: #d81b60; color: white; }
 
-.card-green {
-    background-color: #388E3C; /* Muted, professional green */
-}
+/* TEAL/AQUA */
+.project-card.teal { background-color: #e0f2f1; } 
+.project-card.teal i { color: #00897b; }
+.project-card.teal .btn-learn-more { color: #00897b; border-color: #00897b; }
+.project-card.teal .btn-learn-more:hover { background-color: #00897b; color: white; }
 
-/* Social Icons */
-.social-icons {
+/* Social Links */
+.social-links {
+    text-align: right;
+    margin-top: 30px;
     padding-top: 10px;
-    text-align: right; /* Align to the right side of the content panel */
+    border-top: 1px solid #eee;
 }
 
-.social-icons a {
-    font-size: 20px;
+.social-links i {
+    font-size: 24px;
+    color: #666;
     margin-left: 15px;
-    color: var(--secondary-text);
-    transition: color 0.2s;
 }
 
-.social-icons a:hover {
-    color: var(--accent-blue);
+.social-links i:hover {
+    color: #007bff;
 }
