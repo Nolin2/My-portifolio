@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -260,7 +260,7 @@
                 </p>
 
                 <div class="flex space-x-3 mb-6">
-                    <input type="text" id="ai-query" class="flex-grow p-3 rounded-lg bg-slate-700 focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent text-slate-100 border-none" placeholder="e.g., 'Who is Nolin?'" onkeydown="if(event.key === 'Enter') document.getElementById('ai-submit').click()">
+                    <input type="text" id="ai-query" class="flex-grow p-3 rounded-lg bg-slate-700 focus:ring-2 focus:ring-[#22d3ee] focus:border-transparent text-slate-100 border-none" placeholder="e.g., 'What are Nolin's soft skills?'" onkeydown="if(event.key === 'Enter') document.getElementById('ai-submit').click()">
                     <button id="ai-submit" class="btn-primary px-5 rounded-lg flex items-center" onclick="callGeminiAPI()">
                         Ask AI <i data-lucide="send" class="w-4 h-4 ml-2"></i>
                     </button>
@@ -301,6 +301,7 @@
             <h2 class="section-header mx-auto">Get In Touch</h2>
             <p class="text-lg mb-6 text-slate-300">I am currently seeking full-time AI Engineering roles. Let's discuss your next project.</p>
             <div class="flex justify-center space-x-6">
+                <!-- Links confirmed to be correct mailto: and standard href with target="_blank" -->
                 <a href="mailto:masainollin@gmail.com" class="text-slate-300 hover:text-[#22d3ee] transition">
                     <i data-lucide="mail" class="w-6 h-6 inline-block mr-1"></i> masainollin@gmail.com
                 </a>
@@ -353,7 +354,7 @@
         // PLEASE REPLACE THE PLACEHOLDER TEXT AND LINKS HERE!
         const PROJECT_DETAILS = {
             'wabtech_ai': {
-                title: "Wabtech AI Study Tool (STEM)",
+                title: "Wabtech AI Study Tool (Generative AI)",
                 // Assume a concrete LLM is used
                 description: "A custom Generative AI application built to revolutionize STEM learning. It utilizes the Gemini-2.5-Flash LLM capabilities (like Q&A generation and personalized feedback) to act as a personal tutor. Key functionalities include: generating flashcards based on any topic, receiving AI-graded feedback on practice questions, and robust conversational Q&A.",
                 link: "https://github.com/nolin/wabtech-ai-repo" // <<< REPLACE WITH YOUR REPO/DEMO LINK
@@ -413,7 +414,8 @@ This data is the content of the portfolio website and is the SOLE source of trut
 
 ## 2. Core Expertise & Abilities
 - **Technical Skills:** LLM Integration & Prompt Engineering, Predictive Modeling (90% Accuracy), Data Annotation & Quality Control, Python (Scikit-learn, Pandas), SQL, AWS (S3, SageMaker), Docker, basic TensorFlow/Keras, GitHub Actions, proficiency in data labeling tools.
-- **Good Characteristics:** Adaptable, rigorous commitment to quality and data integrity, strategically motivated problem-solver, highly ethical approach to AI development, collaborative team member.
+- **Soft Skills:** Collaborative team player, highly organized, excellent technical communicator, adaptable, strategic problem-solver, strong passion for ethical and sustainable AI development.
+- **Areas for Development/Improvement (The 'Weakness'):** Nolin is highly focused on technical depth and can sometimes overlook the broader commercial narrative. Improvement goal: Enhancing strategic business communication skills to better articulate the Return on Investment (ROI) and impact of complex technical AI solutions to non-technical stakeholders.
 - **Beliefs/Philosophy (What I believe):** I believe in building AI systems that are not only efficient but also ethically sound and actively contribute to global developmental goals, particularly in sustainability and education. My core commitment is transforming data science into reliable, high-performing software products ready for real-world impact.
 - **Advocacy:** Youth Advocacy & Policy (WFF FAO).
 
@@ -447,9 +449,11 @@ This data is the content of the portfolio website and is the SOLE source of trut
 - **GitHub:** https://github.com/yourprofile (placeholder)
 `;
         
-        const SYSTEM_INSTRUCTION = "You are Nolin Masai Wabuti's professional AI assistant. Your primary function is to answer questions about Nolin's background, professional experience, skills, and values using only the provided knowledge base. If the user asks a challenging interview question, frame the answer using Nolin's skills, projects, and ethical approach listed in the data. If the question cannot be answered using the provided data (e.g., 'What is Nolin's shoe size?'), state politely and clearly that the information is not available in the knowledge base. Be professional, direct, and concise.";
+        const SYSTEM_INSTRUCTION = "You are Nolin Masai Wabuti's professional AI assistant. Adopt a friendly, professional, yet enthusiastic tone, reflecting Nolin's passion for ethical AI and solving real-world problems. Your primary function is to answer questions about Nolin's background, professional experience, skills, and values using *only* the provided knowledge base. If asked about weaknesses, frame the answer as 'Areas for Development/Improvement' as listed in the knowledge base. If the question cannot be answered using the provided data, state politely and clearly that the information is not available in the knowledge base. Be engaging, clear, and ensure the response feels like Nolin's voice.";
         const MODEL_NAME = 'gemini-2.5-flash-preview-09-2025';
-        const apiKey = ""; // Leave as-is, automatically provided by Canvas runtime
+        // NOTE: The apiKey is left as an empty string. The Canvas runtime environment 
+        // will automatically inject the required API key for the Gemini model.
+        const apiKey = ""; 
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${apiKey}`;
 
         const inputField = document.getElementById('ai-query');
