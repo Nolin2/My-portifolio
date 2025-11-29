@@ -145,63 +145,63 @@
             </div>
         </section>
 
-        <section id="projects" class="py-12">
-            <h2 class="section-header">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="ai-card-clickable p-6 rounded-xl" onclick="showProjectDetails('wabtech_ai')">
-                    <i data-lucide="book-open-check" class="w-8 h-8 text-yellow-400 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">Wabtech AI Study Tool (STEM)</h3>
-                    <p class="text-slate-300 text-sm">Developed a custom Generative AI application (GPT/Gemini style) tailored for STEM education. Features include Q&A, flashcard generation, and personalized feedback.</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="bg-slate-700 text-xs px-2 py-0.5 rounded text-slate-200">Generative AI</span>
-                        <span class="bg-slate-700 text-xs px-2 py-0.5 rounded text-slate-200">EdTech</span>
-                        <span class="bg-slate-700 text-xs px-2 py-0.5 rounded text-slate-200">LLM Integration</span>
-                    </div>
-                </div>
-
-                <div class="ai-card-clickable p-6 rounded-xl" onclick="showProjectDetails('https://eco-predict-ai.web.app/')">
-                    <i data-lucide="cloud-cog" class="w-8 h-8 text-green-400 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">Carbon Emission Predictive AI</h3>
-                    <p class="text-slate-300 text-sm">Carbon Emissions is a full web-based AI tool that converts raw, unstructured activity data into an accurate, auditable GHG Emission Report. It uses Google Gemini with real-time grounding, serverless backend logic, and interactive D3.js visualizations to deliver enterprise-grade carbon insights in seconds.
-                        
-What It Does
-Analyzes unstructured inputs (fuel use, electricity, travel, procurement).
-Classifies activities into Scope 1, 2, and 3.
-Fetches live emission factors using Google Search Grounding.
-Calculates total CO₂e with source traceability.
-Generates actionable decarbonization recommendations.
-Visualizes results using interactive charts.
-Skills Used
-AI Engineering:
-Gemini API · LLM grounding · Structured JSON schemas · Prompt engineering
-Backend Development:
-Serverless Functions · API design · Secure key management · Data pipelines
-Frontend Development:
-HTML · TailwindCSS · D3.js · API integration · Responsive UI
-Cloud & Security:
-Firebase Auth · Firestore · Web app deployment
-Data & Domain:
-GHG Protocol · Emission factor mapping · CO₂e calculations.</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="bg-slate-700 text-xs px-2 py-0.5 rounded text-slate-200">Predictive ML</span>
-                        <span class="bg-slate-700 text-xs px-2 py-0.5 rounded text-slate-200">90% Accuracy</span>
-                        <span class="bg-slate-700 text-xs px-2 py-0.5 rounded text-slate-200">Environmental Data</span>
-                    </div>
-                </div>
-
-                <div class="ai-card-clickable p-6 rounded-xl" onclick="showProjectDetails('data_annotation')">
-                    <i data-lucide="database" class="w-8 h-8 text-red-400 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2 text-slate-100">Data Annotation & Quality Control</h3>
-                    <p class="text-slate-300 text-sm">Currently ensuring high-quality, precise labeling of datasets—a crucial foundation for training robust machine learning models.</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span class="bg-slate-700 text-xs px-2 py-0.5 rounded text-slate-200">Data Quality</span>
-                        <span class="bg-slate-700 text-xs px-2 py-0.5 rounded text-slate-200">Labeling</span>
-                        <span class="bg-slate-700 text-xs px-2 py-0.5 rounded text-slate-200">ML Preparation</span>
-                    </div>
+        
+    <!-- Projects Section -->
+    <section id="projects" class="container py-16">
+        <h3 class="text-3xl font-bold section-header">Featured Projects</h3>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Project 1: Wabtech AI Study Tool -->
+            <div class="card rounded-xl overflow-hidden">
+                <img src="images/study-tool.webp" onerror="this.onerror=null; this.src='https://placehold.co/600x337/30363d/8b949e?text=Wabtech+AI+Study+Tool'" alt="Wabtech AI Study Tool screenshot" class="project-img w-full">
+                <div class="p-6">
+                    <h4 class="text-2xl font-semibold mb-3 text-white">Wabtech AI Study Tool (Generative AI)</h4>
+                    <p class="text-[#8b949e] mb-4">
+                        A custom Generative AI application tailored for STEM education. Features include Q&A, flashcard generation, and personalized feedback. This project demonstrates expertise in LLM fine-tuning and domain-specific prompt engineering.
+                    </p>
+                    <a href="https://wabtechai-studytool.netlify.app/" target="_blank" class="text-[#58a6ff] hover:underline font-medium">View Details &rarr;</a>
                 </div>
             </div>
-        </section>
+            
+            <!-- Project 2: Carbon Emission Predictive AI -->
+            <div class="card rounded-xl overflow-hidden">
+                <img src="images/carbon-ai.webp" onerror="this.onerror=null; this.src='https://placehold.co/600x337/30363d/8b949e?text=Carbon+Emission+AI'" alt="Carbon Emission Predictive AI screenshot" class="project-img w-full">
+                <div class="p-6">
+                    <h4 class="text-2xl font-semibold mb-3 text-white">Carbon Emission Predictive AI</h4>
+                    <p class="text-[#8b949e] mb-4">
+                        A powerful predictive model that forecasts carbon emissions with 90% accuracy. Built using XGBoost and extensive feature engineering, providing actionable insights for environmental policy and optimization.
+                    </p>
+                    <a href="https://eco-predict-ai.web.app/" target="_blank" class="text-[#58a6ff] hover:underline font-medium">View Repository &rarr;</a>
+                </div>
+            </div>
+            
+            <!-- Project 3: Data Annotation & QC Platform -->
+            <div class="card rounded-xl overflow-hidden">
+                <img src="images/data-qc.webp" onerror="this.onerror=null; this.src='https://placehold.co/600x337/30363d/8b949e?text=Data+Annotation+QC'" alt="Data Annotation & QC Platform screenshot" class="project-img w-full">
+                <div class="p-6">
+                    <h4 class="text-2xl font-semibold mb-3 text-white">WabTech AgriSence</h4>
+                    <p class="text-[#8b949e] mb-4">
+                        WabTech AgriSense is an  AI-powered system analyzing farm data (soil, crops, weather) to provide risk assessments and actionable recommendations. Built with Node.js backend, Gemini API integration, responsive frontend, and deployed on Render. Skills: AI Engineering, ML, Prompt Engineering, Data Processing, API Integration, Full-Stack Development.
+                    </p>
+                    <a href="https://ai-agriculture-2-8lum.onrender.com/" target="_blank" class="text-[#58a6ff] hover:underline font-medium">Read Case Study &rarr;</a>
+                </div>
+                </div>
+            
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container py-16 text-center">
+        <h3 class="text-3xl font-bold section-header max-w-lg mx-auto">Let's Build the Future of AI Together</h3>
+        <p class="text-xl text-[#8b949e] mb-8 max-w-2xl mx-auto">
+            I am available for new opportunities that involve complex LLM integration, predictive modeling challenges, and MLOps deployment.
+        </p>
+        <div class="space-y-4">
+            <a href="mailto:masainollin@gmail.com" class="btn-primary inline-block px-8 py-4 text-lg rounded-xl font-bold">Email Me: masainollin@gmail.com</a>
+            <p class="text-[#8b949e]">Phone: 0757130382 | <a href="https://www.linkedin.com/in/nolin-masai" target="_blank" class="text-[#58a6ff] hover:underline">LinkedIn Profile</a></p>
+        </div>
+    </section>
+
 
         <section id="cv" class="py-12">
             <h2 class="section-header">CV/Resume</h2>
@@ -465,6 +465,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
 
 
