@@ -1,11 +1,10 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nolin Masai Wabuti - AI Engineer</title>
     
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -77,7 +76,6 @@
 </head>
 <body class="antialiased">
 
-    <!-- Navigation Bar (Dark) -->
     <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-sm shadow-xl border-b border-cyan-900/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
             <div class="text-xl font-bold text-slate-100">
@@ -95,7 +93,6 @@
                 <i data-lucide="menu"></i>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-800/90 p-4 border-t border-slate-700">
             <a href="#about" class="block py-2 text-sm font-medium text-slate-200 hover:text-[#22d3ee]">About</a>
             <a href="#projects" class="block py-2 text-sm font-medium text-slate-200 hover:text-[#22d3ee]">Projects</a>
@@ -106,10 +103,8 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
 
-        <!-- Hero Section -->
         <section id="hero" class="text-center pt-8">
             <div class="flex flex-col lg:flex-row items-center justify-between">
                 <div class="lg:w-3/5 text-left">
@@ -125,13 +120,11 @@
                     </a>
                 </div>
                 <div class="lg:w-2/5 mt-10 lg:mt-0 flex justify-center">
-                    <!-- Image using the uploaded file -->
-                    <img src="23141.jpg" alt="Nolin Masai Wabuti" class="w-64 h-64 rounded-full border-4 border-[#22d3ee] object-cover shadow-2xl">
+                    <img src="23141.jpg" onerror="this.onerror=null; this.src='https://placehold.co/256x256/1e293b/94a3b8?text=Nolin+Masai'" alt="Nolin Masai Wabuti" class="w-64 h-64 rounded-full border-4 border-[#22d3ee] object-cover shadow-2xl">
                 </div>
             </div>
         </section>
 
-        <!-- About Me Section -->
         <section id="about" class="py-12">
             <h2 class="section-header">About Me</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -152,12 +145,10 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="py-12">
             <h2 class="section-header">Featured Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Project 1: Wabtech AI Study Tool (Generative AI) - CLICKABLE -->
                 <div class="ai-card-clickable p-6 rounded-xl" onclick="showProjectDetails('wabtech_ai')">
                     <i data-lucide="book-open-check" class="w-8 h-8 text-yellow-400 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2 text-slate-100">Wabtech AI Study Tool (STEM)</h3>
@@ -169,7 +160,6 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Carbon Emission AI (Predictive Modeling) - CLICKABLE -->
                 <div class="ai-card-clickable p-6 rounded-xl" onclick="showProjectDetails('carbon_ai')">
                     <i data-lucide="cloud-cog" class="w-8 h-8 text-green-400 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2 text-slate-100">Carbon Emission Predictive AI</h3>
@@ -181,7 +171,6 @@
                     </div>
                 </div>
 
-                <!-- Project 3: Data Annotation (Current Role) - CLICKABLE -->
                 <div class="ai-card-clickable p-6 rounded-xl" onclick="showProjectDetails('data_annotation')">
                     <i data-lucide="database" class="w-8 h-8 text-red-400 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2 text-slate-100">Data Annotation & Quality Control</h3>
@@ -195,7 +184,6 @@
             </div>
         </section>
 
-        <!-- CV/Resume Section (NEW) -->
         <section id="cv" class="py-12">
             <h2 class="section-header">CV/Resume</h2>
             <div class="ai-card-clickable p-8 rounded-xl max-w-2xl mx-auto text-center">
@@ -208,13 +196,11 @@
             </div>
         </section>
 
-        <!-- Certifications Section (UPDATED to use Images) -->
         <section id="certifications" class="py-12">
             <h2 class="section-header">Certifications & Advocacy</h2>
-            <p class="text-slate-300 text-center mb-8">Click on any image to view the full details or link (if provided).</p>
+            <p class="text-slate-300 text-center mb-8">Click on any card to view the details or link.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <!-- Cert 1: WFF FAO -->
                 <div class="ai-card-clickable p-5 rounded-xl text-center" onclick="window.open('https://drive.google.com/file/d/1fXT9jrT2W4SolFJIRdCaYDaJCq7Is1af/view?usp=drivesdk', '_blank')">
                     <img src="cert-wff.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x120/1e293b/94a3b8?text=WFF+FAO+Cert'" alt="WFF FAO Youth Rep Certificate" class="cert-img-placeholder">
                     <i data-lucide="award" class="w-6 h-6 text-pink-400 mb-3 mx-auto"></i>
@@ -222,7 +208,6 @@
                     <p class="text-slate-300 text-xs italic">Sustainable Food Systems Policy</p>
                 </div>
 
-                <!-- Cert 2: AI for Software Engineering (PLP) -->
                 <div class="ai-card-clickable p-5 rounded-xl text-center" onclick="alertUser('To display your AI for Software Engineering certificate image, replace \'cert-ai-eng.jpg\' with the actual filename of your certificate photo and update the link.')">
                     <img src="cert-ai-eng.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x120/1e293b/94a3b8?text=AI+Eng+Cert'" alt="AI for Software Engineering Certificate" class="cert-img-placeholder">
                     <i data-lucide="cpu" class="w-6 h-6 text-teal-400 mb-3 mx-auto"></i>
@@ -230,7 +215,6 @@
                     <p class="text-slate-300 text-xs italic">Power Learn Project</p>
                 </div>
 
-                <!-- Cert 3: Python for Data Science & AI Dev (Coursera) -->
                 <div class="ai-card-clickable p-5 rounded-xl text-center" onclick="alertUser('To display your Python for Data Science certificate image, replace \'cert-python.jpg\' with the actual filename of your certificate photo and update the link.')">
                     <img src="cert-python.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x120/1e293b/94a3b8?text=Python+Cert'" alt="Python for Data Science Certificate" class="cert-img-placeholder">
                     <i data-lucide="code" class="w-6 h-6 text-indigo-400 mb-3 mx-auto"></i>
@@ -238,7 +222,6 @@
                     <p class="text-slate-300 text-xs italic">Coursera Development Track</p>
                 </div>
 
-                <!-- Cert 4: Artificial Intelligence (Coursera) -->
                 <div class="ai-card-clickable p-5 rounded-xl text-center" onclick="alertUser('To display your Artificial Intelligence certificate image, replace \'cert-ai-core.jpg\' with the actual filename of your certificate photo and update the link.')">
                     <img src="cert-ai-core.jpg" onerror="this.onerror=null; this.src='https://placehold.co/400x120/1e293b/94a3b8?text=AI+Core+Cert'" alt="Artificial Intelligence Core Concepts Certificate" class="cert-img-placeholder">
                     <i data-lucide="brain-circuit" class="w-6 h-6 text-orange-400 mb-3 mx-auto"></i>
@@ -248,7 +231,6 @@
             </div>
         </section>
 
-        <!-- AI Integrated Assistant Section -->
         <section id="assistant" class="py-12">
             <h2 class="section-header">
                 <i data-lucide="gem" class="inline-block w-8 h-8 mr-2 text-pink-400"></i>
@@ -266,42 +248,29 @@
                     </button>
                 </div>
 
-                <!-- Response Area -->
                 <div id="ai-response-container" class="mt-8 pt-4 border-t border-slate-700 hidden">
                     <p class="font-semibold text-lg mb-3 text-[#22d3ee] flex items-center">
                         <i data-lucide="bot" class="w-5 h-5 mr-2"></i> Assistant Response:
                     </p>
                     <div id="ai-response" class="p-4 rounded-xl code-block whitespace-pre-wrap text-slate-200">
-                        <!-- AI Response Text will be injected here -->
-                    </div>
-                    <!-- Sources (Kept for compatibility, though always empty for this task) -->
-                    <div id="ai-sources" class="mt-4 text-xs text-slate-400 hidden">
-                        <p class="font-semibold mb-1">Sources:</p>
-                        <ul id="ai-source-list" class="list-disc ml-4 space-y-1">
-                            <!-- Sources will be injected here -->
-                        </ul>
-                    </div>
+                        </div>
                 </div>
 
-                <!-- Loading Spinner -->
                 <div id="ai-loading" class="hidden flex justify-center items-center mt-8 pt-4 border-t border-slate-700">
                     <div class="loading-spinner w-8 h-8 border-4 border-slate-700 rounded-full"></div>
                     <p class="ml-3 text-cyan-400">Thinking...</p>
                 </div>
 
-                <!-- Error Message -->
                 <div id="ai-error" class="hidden mt-4 p-3 bg-red-900/40 text-red-300 border border-red-700 rounded-lg">
                     An error occurred while fetching the response. Please check the console for details.
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-12 text-center">
             <h2 class="section-header mx-auto">Get In Touch</h2>
             <p class="text-lg mb-6 text-slate-300">I am currently seeking full-time AI Engineering roles. Let's discuss your next project.</p>
             <div class="flex justify-center space-x-6">
-                <!-- Links confirmed to be correct mailto: and standard href with target="_blank" -->
                 <a href="mailto:masainollin@gmail.com" class="text-slate-300 hover:text-[#22d3ee] transition">
                     <i data-lucide="mail" class="w-6 h-6 inline-block mr-1"></i> masainollin@gmail.com
                 </a>
@@ -315,14 +284,12 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-slate-800 py-6 mt-16 border-t border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-400">
             &copy; 2025 Nolin.AI | Built with Gemini Integration Demo
         </div>
     </footer>
     
-    <!-- Project Modal Structure (Dark Theme) -->
     <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4">
         <div class="ai-card-clickable w-full max-w-2xl p-8 rounded-xl relative bg-slate-800">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-red-400 transition">
@@ -343,75 +310,138 @@
         </div>
     </div>
     
-    <!-- FIX: Move Lucide script here to ensure it loads before it's called -->
     <script src="https://unpkg.com/lucide@latest"></script>
 <script>
-const BOT_KB = {
-    name: "Nolin Masai Wabuti",
-    intro: "I transform complex data science models into reliable software products.",
-    gender: "female",
-    skills: ["LLM Integration & Prompt Engineering","Predictive Modeling","Data Annotation","Python","SQL","AWS","Docker","TensorFlow/Keras","GitHub Actions"],
-    projects: [
-        {title: "Wabtech AI Study Tool", skills: ["LLM Integration","Prompt Engineering"], img: ""},
-        {title: "Carbon Emission Predictive AI", skills: ["XGBoost","Feature Engineering"], img: ""},
-        {title: "Data Annotation & Quality Control", skills: ["Labeling","QA"], img: ""}
-    ],
-    experience: ["2 years in ML and AI projects","Worked on anomaly detection","Built credit card fraud detection model"],
-    certifications: ["Certification 1","Certification 2","Certification 3"],
-    contact: {phone: '0757130382', email: 'masainollin@gmail.com', linkedin: 'https://www.linkedin.com/in/nolin-masai'}
+// --- Project Details Data for Modals ---
+const PROJECT_DETAILS = {
+    wabtech_ai: {
+        title: "Wabtech AI Study Tool (STEM)",
+        description: "A Generative AI application built to personalize STEM education. It processes learning material and provides features like personalized Q&A, automatic flashcard generation, and targeted feedback to optimize study sessions. It demonstrates expertise in large language model (LLM) integration and custom prompt engineering for specialized domains.",
+        link: "https://github.com/nolin-masai/wabtech-ai-study-tool" // REPLACE with actual link if available
+    },
+    carbon_ai: {
+        title: "Carbon Emission Predictive AI",
+        description: "Developed and deployed a highly accurate (90%) predictive machine learning model using techniques like XGBoost and extensive feature engineering on environmental data. The model forecasts carbon emission trends, providing key insights for sustainable policy-making and corporate environmental optimization.",
+        link: "#" // REPLACE with actual link if available
+    },
+    data_annotation: {
+        title: "Data Annotation & Quality Control",
+        description: "Crucial project focused on the foundational layer of AI: high-quality data. Involves precise labeling, validation, and quality assurance protocols for complex datasets (e.g., imagery, text) to ensure the robustness and reliability of subsequent machine learning model training.",
+        link: "#" // REPLACE with actual link if available
+    },
 };
-function matchIntent(text){
-    const t = text.toLowerCase();
-    if(/who|introduce|about/i.test(t)) return 'who';
-    if(/skill|skills|abilities|technologies/i.test(t)) return 'skills';
-    if(/project|projects/i.test(t)) return 'projects';
-    if(/experience|worked/i.test(t)) return 'experience';
-    if(/certification|certificate|certifications/i.test(t)) return 'certifications';
-    if(/gender|girl|female/i.test(t)) return 'gender';
-    if(/contact|email|phone|linkedin/i.test(t)) return 'contact';
-    return null;
+
+// --- Frontend Helper Functions ---
+
+/**
+ * Shows the Project Detail Modal with the correct content.
+ * @param {string} projectId - The key for the project in PROJECT_DETAILS.
+ */
+function showProjectDetails(projectId) {
+    const data = PROJECT_DETAILS[projectId];
+    if (!data) return;
+
+    document.getElementById('modal-title').textContent = data.title;
+    document.getElementById('modal-description').textContent = data.description;
+    
+    const linkElement = document.getElementById('modal-view-link');
+    linkElement.href = data.link;
+    linkElement.classList.toggle('hidden', data.link === '#'); // Hide link if placeholder
+
+    document.getElementById('project-modal').classList.remove('hidden');
 }
-function createMessage(text, from='bot'){
-    const div=document.createElement('div');
-    div.className='chat-bubble '+(from==='bot'?'bot text-slate-200':'user text-white');
-    div.textContent=text;
-    return div;
+
+/**
+ * Hides the Project Detail Modal.
+ */
+function closeModal() {
+    document.getElementById('project-modal').classList.add('hidden');
 }
-function scrollChat(){
-    const win=document.getElementById('chat-window-main');
-    win.scrollTop=win.scrollHeight;
+
+/**
+ * Shows a browser alert for the user.
+ * @param {string} message - The message to show.
+ */
+function alertUser(message) {
+    alert(message);
 }
-function handleChat(){
-    const input=document.getElementById('ai-query');
-    const q=input.value.trim();
-    if(!q) return;
-    const win=document.getElementById('chat-window-main');
-    win.appendChild(createMessage(q,'user'));
-    input.value='';
-    setTimeout(()=>{
-        const intent=matchIntent(q);
-        let reply='';
-        if(!intent){
-            reply="Sorry, I don't understand. Try asking about skills, projects, experience, certifications, gender, or contact info.";
-        } else {
-            switch(intent){
-                case 'who': reply=`${BOT_KB.name}: ${BOT_KB.intro}`; break;
-                case 'skills': reply='Skills: '+BOT_KB.skills.join(', '); break;
-                case 'projects': reply='Projects:\n'+BOT_KB.projects.map(p=>`- ${p.title}: ${p.skills.join(', ')}`).join('\n'); break;
-                case 'experience': reply='Experience:\n'+BOT_KB.experience.join('\n'); break;
-                case 'certifications': reply='Certifications:\n'+BOT_KB.certifications.join('\n'); break;
-                case 'gender': reply=`${BOT_KB.name.split(' ')[0]} is ${BOT_KB.gender}.`; break;
-                case 'contact': reply=`Phone: ${BOT_KB.contact.phone} | Email: ${BOT_KB.contact.email} | LinkedIn: ${BOT_KB.contact.linkedin}`; break;
-            }
+
+// --- Gemini API Call Function (Frontend Only) ---
+
+const aiQueryInput = document.getElementById('ai-query');
+const aiSubmitButton = document.getElementById('ai-submit');
+const aiResponseContainer = document.getElementById('ai-response-container');
+const aiResponseDiv = document.getElementById('ai-response');
+const aiLoadingDiv = document.getElementById('ai-loading');
+const aiErrorDiv = document.getElementById('ai-error');
+
+// --- CRITICAL UPDATE: RENDER's PUBLIC API URL ---
+const API_URL = 'https://p-backend-4.onrender.com/api/ask-ai';
+// ---------------------------------------------------
+
+/**
+ * Handles the communication with the backend /api/ask-ai endpoint.
+ */
+async function callGeminiAPI() {
+    const userQuery = aiQueryInput.value.trim();
+    if (userQuery === "") {
+        alert("Please enter a question for the AI Assistant.");
+        return;
+    }
+
+    // 1. Setup UI for Loading State
+    aiResponseContainer.classList.add('hidden');
+    aiErrorDiv.classList.add('hidden');
+    aiLoadingDiv.classList.remove('hidden');
+    aiSubmitButton.disabled = true;
+    aiQueryInput.disabled = true;
+
+    try {
+        // 2. Fetch data from the public Render server endpoint
+        const response = await fetch(API_URL, { // <-- Now using the publicly deployed URL
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ query: userQuery }),
+        });
+
+        // 3. Handle HTTP Errors (e.g., 500 from server)
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error('Server error response:', errorText);
+            throw new Error(`AI server responded with status: ${response.status}`);
         }
-        win.appendChild(createMessage(reply,'bot'));
-        scrollChat();
-    },200);
+
+        const data = await response.json();
+
+        // 4. Update UI with the AI response
+        aiResponseDiv.textContent = data.text || "No specific response text was generated.";
+        aiResponseContainer.classList.remove('hidden');
+
+    } catch (error) {
+        // 5. Handle Network/Fetch Errors
+        console.error('Error calling AI Assistant:', error);
+        aiErrorDiv.classList.remove('hidden');
+        aiResponseDiv.textContent = `Could not connect to the AI Assistant. Please ensure the backend server is running and accessible. Error: ${error.message}`;
+        aiResponseContainer.classList.remove('hidden'); 
+    } finally {
+        // 6. Reset UI
+        aiLoadingDiv.classList.add('hidden');
+        aiSubmitButton.disabled = false;
+        aiQueryInput.disabled = false;
+    }
 }
-document.addEventListener('DOMContentLoaded',()=>{
-    const win=document.getElementById('chat-window-main');
-    win.appendChild(createMessage("Hi — I'm Nolin's assistant. Ask about skills, projects, experience, certifications, gender, or contact info."));
-    scrollChat();
+
+// --- Initialization ---
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Initialize Lucide Icons
+    lucide.createIcons();
+    
+    // 2. Initial Message for AI Assistant Section
+    aiResponseDiv.textContent = "Hi! I'm Nolin's custom AI Assistant. Ask me about her projects (Wabtech AI, Carbon Emission AI) or skills (LLM, Python).";
+    aiResponseContainer.classList.remove('hidden');
 });
 </script>
 </body>
